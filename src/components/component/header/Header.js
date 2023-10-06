@@ -13,6 +13,9 @@ export default function Header() {
         <NavLink to="/cars" style={handleActiveStyle}>
           Cars
         </NavLink>
+        <NavLink to="/favourite" style={handleActiveStyle}>
+          Favourite
+        </NavLink>
       </nav>
       <Outlet></Outlet>
     </header>

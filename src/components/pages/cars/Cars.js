@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import OneCarCard from 'components/component/oneCarCard/OneCarCard';
 import Loader from 'components/component/Loader/Loader';
 let url = new URL('https://651fe1f4906e276284c3ac51.mockapi.io/api/cars');
 url.searchParams.append('completed', false);
-url.searchParams.append('page', 1);
+url.searchParams.append('page', 2);
 url.searchParams.append('limit', 10);
 
 export default function Cars() {
   const [carsList, setCarsList] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -29,27 +30,19 @@ export default function Cars() {
     }
     fetchData();
   }, []);
-  if (isLoading) {
-    return (
-      <div>
-        <h1>Trending today</h1>
-        <Loader></Loader>
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div>
+  //       <Loader></Loader>
+  //     </div>
+  //   );
+  // }
   return (
     <div>
-      <h1>Select your car</h1>
+      <h2>Select your car</h2>
+      {isLoading ? <Loader /> : ''}
 
-      <ul>
-        {carsList.map(car => (
-          <li key={car.id}>
-            <Link to={`/cars/${car.id}`} state={{ from: `/` }}>
-              {`${car.make}${car.model}`}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <OneCarCard carsList={carsList}></OneCarCard>
     </div>
   );
 }

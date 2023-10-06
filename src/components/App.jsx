@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Hero from './component/Hero/Hero';
+import Favourite from './pages/favourite/Favourite';
 import Home from './pages/home/Home';
 import Cars from './pages/cars/Cars';
 // import Movies from './pages/movies/Movies';
@@ -15,7 +15,7 @@ export const App = () => {
         <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
           <Route path="/cars" element={<Cars />}></Route>
-          <Route path="/movies/:movieId" element={<Hero />}></Route>
+          <Route path="/favourite" element={<Favourite />}></Route>
           <Route path="*" element={<NotFound></NotFound>} />
         </Route>
       </Routes>
