@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Loader from 'components/component/Loader/Loader';
+// import Loader from 'components/component/Loader/Loader';
 import Description from 'components/component/description/Description';
 
 export default function Favourite() {
