@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/adverts-cars/static/css/main.6c452776.css",
-    "main.js": "/adverts-cars/static/js/main.19a4cd96.js",
+    "main.css": "/adverts-cars/static/css/main.efe5f686.css",
+    "main.js": "/adverts-cars/static/js/main.fa80f346.js",
     "index.html": "/adverts-cars/index.html",
-    "main.6c452776.css.map": "/adverts-cars/static/css/main.6c452776.css.map",
-    "main.19a4cd96.js.map": "/adverts-cars/static/js/main.19a4cd96.js.map"
+    "static/media/FavoriteIcon.svg": "/adverts-cars/static/media/FavoriteIcon.f928e865645ab10ebb69e73ea1c3c491.svg",
+    "static/media/heart.svg": "/adverts-cars/static/media/heart.623a3b874365d724c658e79a860ad4a4.svg",
+    "main.efe5f686.css.map": "/adverts-cars/static/css/main.efe5f686.css.map",
+    "main.fa80f346.js.map": "/adverts-cars/static/js/main.fa80f346.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c452776.css",
-    "static/js/main.19a4cd96.js"
+    "static/css/main.efe5f686.css",
+    "static/js/main.fa80f346.js"
   ]
 }
