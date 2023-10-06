@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Description from '../description/Description';
 import { CardImg, Card, CarsList, FavouriteBtn } from './OneCarCard.styled';
 export default function OneCarCard({ carsList }) {
