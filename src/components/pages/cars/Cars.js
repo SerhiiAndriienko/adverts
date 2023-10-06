@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
-import OneCarCard from 'components/component/oneCarCard/OneCarCard';
+import AllCarCards from 'components/component/allCarCards/AllCarCards';
 import Loader from 'components/component/Loader/Loader';
 let url = new URL('https://651fe1f4906e276284c3ac51.mockapi.io/api/cars');
 url.searchParams.append('completed', false);
@@ -11,8 +11,13 @@ url.searchParams.append('limit', 10);
 export default function Cars() {
   const [carsList, setCarsList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [favouriteList, setFavouriteList] = useState([]);
 
   useEffect(() => {
+    const getFromStorage = JSON.parse(localStorage.getItem('favourite'));
+    if (getFromStorage) {
+      setFavouriteList(getFromStorage);
+    }
     async function fetchData() {
       setIsLoading(true);
 
@@ -30,19 +35,19 @@ export default function Cars() {
     }
     fetchData();
   }, []);
-  // if (isLoading) {
-  //   return (
-  //     <div>
-  //       <Loader></Loader>
-  //     </div>
-  //   );
-  // }
+  const addFavouriteList = array => {
+    setFavouriteList(array);
+  };
   return (
     <div>
-      <h2>Select your car</h2>
+      <h2 style={{ textAlign: 'center' }}>Select your car</h2>
       {isLoading ? <Loader /> : ''}
 
-      <OneCarCard carsList={carsList}></OneCarCard>
+      <AllCarCards
+        favouriteList={favouriteList}
+        addFavouriteList={addFavouriteList}
+        carsList={carsList}
+      ></AllCarCards>
     </div>
   );
 }

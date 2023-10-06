@@ -1,12 +1,13 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { Navigation } from './Header.styled';
 
 export default function Header() {
   const handleActiveStyle = ({ isActive }) => {
-    return { color: isActive ? 'red' : 'black', marginRight: 20 };
+    return { color: isActive ? 'red' : 'black' };
   };
   return (
     <header>
-      <nav>
+      <Navigation>
         <NavLink to="/" style={handleActiveStyle}>
           Home
         </NavLink>
@@ -16,7 +17,7 @@ export default function Header() {
         <NavLink to="/favourite" style={handleActiveStyle}>
           Favourite
         </NavLink>
-      </nav>
+      </Navigation>
       <Outlet></Outlet>
     </header>
   );

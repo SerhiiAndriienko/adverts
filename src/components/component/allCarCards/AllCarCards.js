@@ -1,7 +1,12 @@
 // import { Link } from 'react-router-dom';
 import Description from '../description/Description';
-import { CardImg, Card, CarsList, FavouriteBtn } from './OneCarCard.styled';
-export default function OneCarCard({ carsList }) {
+import { CardImg, Card, CarsList } from './AllCarCards.styled';
+import { FavouriteBtn } from 'components/component/favouriteBtn/FavouriteBtn';
+export default function AllCarCard({
+  carsList,
+  favouriteList,
+  addFavouriteList,
+}) {
   return (
     <CarsList>
       {carsList.map(car => (
@@ -13,13 +18,9 @@ export default function OneCarCard({ carsList }) {
             </div>
           </div>
           <FavouriteBtn
-          // onClick={() => {
-          //   if (inFavouriteList) {
-          //     removeFromFavourite(data);
-          //   } else {
-          //     addToFavourite(data);
-          //   }
-          // }}
+            car={car}
+            favouriteList={favouriteList}
+            addFavouriteList={addFavouriteList}
           >
             favorite
           </FavouriteBtn>

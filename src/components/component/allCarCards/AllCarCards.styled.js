@@ -27,7 +27,7 @@ export const CarsList = styled.ul`
   list-style: none;
   gap: 10px;
 `;
-export const FavouriteBtn = styled.button`
+export const FavouriteBtnEl = styled.button`
   background-color: #3470ff;
   margin: 0 auto;
   border: none;
