@@ -6,8 +6,17 @@ import {
   CarModel,
   LearnMoreBtn,
 } from './Description.styled';
-export default function Description({ car }) {
+export default function Description({
+  car,
+  isModalOpen,
+  setIsModalOpen,
+  setSelectedCar,
+}) {
   const addressArray = car.address.split(', ');
+  const openModal = () => {
+    setIsModalOpen(!isModalOpen);
+    setSelectedCar(car);
+  };
   return (
     <Descriptions>
       <Decoration>
@@ -20,7 +29,7 @@ export default function Description({ car }) {
         {addressArray[2]} | {addressArray[1]} | {car.rentalCompany} | {car.type}{' '}
         | {car.model} | {car.id} |{car.functionalities[0]}
       </DescriptionPart>
-      <LearnMoreBtn>Learn more</LearnMoreBtn>
+      <LearnMoreBtn onClick={openModal}>Learn more</LearnMoreBtn>
     </Descriptions>
   );
 }

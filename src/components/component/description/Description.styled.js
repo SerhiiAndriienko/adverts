@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const DescriptionPart = styled.p`
-  padding-bottom: 28px;
+  min-height: 100px;
   color: #cdcdcd;
 `;
 export const CarModel = styled.span`

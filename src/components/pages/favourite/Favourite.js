@@ -6,7 +6,7 @@ export default function Favourite() {
   const [favouriteList, setFavouriteList] = useState([]);
   useEffect(() => {
     const getFromStorage = JSON.parse(localStorage.getItem('favourite'));
-    if (getFromStorage[0]) {
+    if (getFromStorage) {
       setFavouriteList(getFromStorage);
     }
   }, []);
