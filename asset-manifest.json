@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/adverts-cars/static/css/main.efe5f686.css",
-    "main.js": "/adverts-cars/static/js/main.fa80f346.js",
+    "main.js": "/adverts-cars/static/js/main.d104f1de.js",
     "index.html": "/adverts-cars/index.html",
     "static/media/FavoriteIcon.svg": "/adverts-cars/static/media/FavoriteIcon.f928e865645ab10ebb69e73ea1c3c491.svg",
     "static/media/heart.svg": "/adverts-cars/static/media/heart.623a3b874365d724c658e79a860ad4a4.svg",
     "main.efe5f686.css.map": "/adverts-cars/static/css/main.efe5f686.css.map",
-    "main.fa80f346.js.map": "/adverts-cars/static/js/main.fa80f346.js.map"
+    "main.d104f1de.js.map": "/adverts-cars/static/js/main.d104f1de.js.map"
   },
   "entrypoints": [
     "static/css/main.efe5f686.css",
-    "static/js/main.fa80f346.js"
+    "static/js/main.d104f1de.js"
   ]
 }
