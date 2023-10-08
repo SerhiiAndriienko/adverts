@@ -11,9 +11,10 @@ export const LoadMoreBtn = styled.button`
   margin: 0 auto;
   border: 1px #3470ff solid;
 
-  :focus,
   :hover {
     background-color: #3470ff;
     color: white;
   }
+  margin-top: 50px;
+  margin-bottom: 150px;
 `;

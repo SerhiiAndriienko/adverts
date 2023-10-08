@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import AllCarCards from 'components/component/allCarCards/AllCarCards';
 import Loader from 'components/component/Loader/Loader';
-// import { Filter } from 'components/component/filter/Filter';
 import { LoadMore } from 'components/component/loadMore/LoadMore';
 let url = new URL('https://651fe1f4906e276284c3ac51.mockapi.io/api/cars');
-
-// url.searchParams.append('completed', false);
-// url.searchParams.append('page', 2);
-// url.searchParams.append('limit', 10);
 
 export default function Cars() {
   const [carsList, setCarsList] = useState([]);
@@ -42,7 +36,8 @@ export default function Cars() {
         });
     }
     fetchData();
-  }, [page]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const perPage = (pageNumber, carsList) => {
     setCarsList(carsList.slice(0, pageNumber * 8));
   };
@@ -52,7 +47,7 @@ export default function Cars() {
 
   const nextPage = () => {
     setPage(page + 1);
-    test(page + 1, allCarsList);
+    perPage(page + 1, allCarsList);
   };
 
   return (

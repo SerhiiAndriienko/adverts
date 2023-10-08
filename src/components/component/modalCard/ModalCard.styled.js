@@ -5,7 +5,6 @@ export const Modal = styled.div`
   margin: 0 auto;
   min-height: 200px;
   max-width: 541px;
-  cursor: pointer;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -48,7 +47,7 @@ export const CarsList = styled.ul`
   gap: 10px;
 `;
 
-export const CloseBtn = styled.button`
+export const CloseBtn = styled.img`
   margin: 0 auto;
   border: none;
   display: block;
@@ -57,12 +56,14 @@ export const CloseBtn = styled.button`
   border-radius: 10px;
   top: 16px;
   right: 16px;
+  cursor: pointer;
 `;
 
 export const DescriptionPart = styled.p`
   color: rgba(18, 20, 23, 0.5);
-  font-size: 14px;
-  letter-spacing: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-top: 8px;
 `;
 export const CarModel = styled.span`
   color: #3470ff;
@@ -81,6 +82,8 @@ export const Decoration = styled.div`
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
+  padding-top: 14px;
+
   p {
     margin: 0;
   }
@@ -89,17 +92,34 @@ export const Prise = styled.span`
   list-style: none;
   display: inline;
 `;
-export const LearnMoreBtn = styled.button`
+export const RentalCarBtn = styled.a`
   background-color: #3470ff;
-  width: 95%;
+  width: 35%;
   border: none;
   display: block;
   color: white;
   padding: 12px;
   border-radius: 10px;
   margin-top: auto;
+  text-align: center;
+  cursor: pointer;
 `;
 
 export const BlueColor = styled.span`
   color: #3470ff;
+  font-weight: 700;
+`;
+
+export const ConditionsList = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+`;
+export const Condition = styled.li`
+  padding: 7px 14px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  font-size: 13px;
 `;

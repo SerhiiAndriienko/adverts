@@ -9,4 +9,5 @@ export const FavouriteBtnEl = styled.div`
   border-radius: 10px;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 `;

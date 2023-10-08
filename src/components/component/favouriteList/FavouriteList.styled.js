@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const CardImg = styled.img`
-  object-fit: cover;
-  max-width: 274px;
-  display: block;
-  border-radius: 10px;
-  height: 268px;
-`;
 export const Card = styled.li`
   background-color: rgba(255, 255, 255, 0.7);
   margin-bottom: 21px;
@@ -22,7 +15,6 @@ export const Card = styled.li`
     transform: scale(1.01);
   }
 `;
-
 export const CarsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -34,4 +26,11 @@ export const Decoration = styled.div`
   width: 274px;
   flex-direction: column;
   height: 426px;
+`;
+export const CardImg = styled.img`
+  object-fit: cover;
+  max-width: 274px;
+  display: block;
+  border-radius: 10px;
+  height: 268px;
 `;

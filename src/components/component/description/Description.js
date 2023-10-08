@@ -18,18 +18,20 @@ export default function Description({
     setSelectedCar(car);
   };
   return (
-    <Descriptions>
-      <Decoration>
-        <p>
-          {car.make} <CarModel>{car.model}</CarModel>, {car.year}
-        </p>
-        <Prise>{car.rentalPrice}</Prise>
-      </Decoration>
-      <DescriptionPart>
-        {addressArray[2]} | {addressArray[1]} | {car.rentalCompany} | {car.type}{' '}
-        | {car.model} | {car.id} |{car.functionalities[0]}
-      </DescriptionPart>
+    <>
+      <Descriptions>
+        <Decoration>
+          <p>
+            {car.make} <CarModel>{car.model}</CarModel>, {car.year}
+          </p>
+          <Prise>{car.rentalPrice}</Prise>
+        </Decoration>
+        <DescriptionPart>
+          {addressArray[1]} | {addressArray[2]} | {car.rentalCompany} |{' '}
+          {car.type} | {car.model} | {car.id} | {car.functionalities[0]}
+        </DescriptionPart>
+      </Descriptions>
       <LearnMoreBtn onClick={openModal}>Learn more</LearnMoreBtn>
-    </Descriptions>
+    </>
   );
 }

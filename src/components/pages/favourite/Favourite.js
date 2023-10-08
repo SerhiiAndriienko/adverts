@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import Loader from 'components/component/Loader/Loader';
-import Description from 'components/component/description/Description';
+import { FavouriteList } from 'components/component/favouriteList/FavouriteList';
 
 export default function Favourite() {
   const [favouriteList, setFavouriteList] = useState([]);
@@ -13,15 +12,10 @@ export default function Favourite() {
   return favouriteList[0] ? (
     <div>
       <h2 style={{ textAlign: 'center' }}>Your favourite`s cars list:</h2>
-      <div>
-        {favouriteList.map(car => (
-          <div key={car.id} style={{ display: 'block', width: 274 }}>
-            <img src={car.img} width="274px" alt={`Car ${car.id}`} />
-            <Description car={car} />
-          </div>
-        ))}
-      </div>
-      {/* {isLoading ? <Loader /> : ''} */}
+      <FavouriteList
+        favouriteList={favouriteList}
+        setFavouriteList={setFavouriteList}
+      ></FavouriteList>
     </div>
   ) : (
     <div>
