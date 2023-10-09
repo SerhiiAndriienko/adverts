@@ -14,6 +14,7 @@ import {
   CarModel,
   RentalCarBtn,
 } from './FavouriteList.styled';
+import auto from '../../public/error-auto.jpg';
 
 export function FavouriteList({ favouriteList, setFavouriteList }) {
   const [selectedCar, setSelectedCar] = useState(null);
@@ -49,7 +50,13 @@ export function FavouriteList({ favouriteList, setFavouriteList }) {
           <Card key={selectedCar.id}>
             <div>
               <CardDecoration style={{ display: 'block' }}>
-                <CardImg src={selectedCar.img}></CardImg>
+                <CardImg
+                  src={selectedCar.img}
+                  onError={e => {
+                    e.target.src = auto;
+                    e.preventDefault();
+                  }}
+                ></CardImg>
                 <Decoration>
                   <p>
                     {selectedCar.make} <CarModel>{selectedCar.model}</CarModel>,{' '}
