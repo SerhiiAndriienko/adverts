@@ -51,10 +51,9 @@ export default function Cars() {
   };
 
   return (
-    <div>
-      <h2 style={{ textAlign: 'center' }}>Select your car</h2>
+    <div style={{ maxWidth: '1184px', margin: '0 auto' }}>
+      <h2 style={{ textAlign: 'center' }}>Select your car:</h2>
       {isLoading ? <Loader /> : ''}
-      {/* <Filter carsList={allCarsList}></Filter> */}
       <AllCarCards
         favouriteList={favouriteList}
         addFavouriteList={addFavouriteList}

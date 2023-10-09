@@ -6,19 +6,19 @@ export default function Header() {
     return { color: isActive ? 'red' : 'black' };
   };
   return (
-    <header>
+    <div>
       <Navigation>
         <NavLink to="/" style={handleActiveStyle}>
           Home
         </NavLink>
-        <NavLink to="/cars" style={handleActiveStyle}>
-          Cars
+        <NavLink to="/catalog" style={handleActiveStyle}>
+          Catalog
         </NavLink>
         <NavLink to="/favourite" style={handleActiveStyle}>
           Favourite
         </NavLink>
       </Navigation>
       <Outlet></Outlet>
-    </header>
+    </div>
   );
 }

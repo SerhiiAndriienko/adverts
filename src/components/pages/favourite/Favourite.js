@@ -10,7 +10,7 @@ export default function Favourite() {
     }
   }, []);
   return favouriteList[0] ? (
-    <div>
+    <div style={{ maxWidth: '1184px', margin: '0 auto' }}>
       <h2 style={{ textAlign: 'center' }}>Your favourite`s cars list:</h2>
       <FavouriteList
         favouriteList={favouriteList}
@@ -18,7 +18,7 @@ export default function Favourite() {
       ></FavouriteList>
     </div>
   ) : (
-    <div>
+    <div style={{ maxWidth: '1184px', margin: '0 auto', textAlign: 'center' }}>
       <h1>Your favourite`s cars list is empty</h1>
     </div>
   );
