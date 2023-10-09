@@ -20,6 +20,7 @@ export const CarsList = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   gap: 29px;
+  padding: 0;
 `;
 export const Decoration = styled.div`
   display: flex;

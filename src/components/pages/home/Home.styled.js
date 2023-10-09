@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import auto from '../../public/error-auto.jpg';
 export const Container = styled.div`
   max-width: 1184px;
   padding: 30px;
