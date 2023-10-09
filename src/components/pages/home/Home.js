@@ -24,9 +24,9 @@ export default function Home() {
             insurance?
           </p>
           <p>Just one phone call and you can choose among dozens of cars.</p>
-          <p>
+          <p style={{ lineHeight: '1.5' }}>
             In our catalog you will find both budget options for everyday travel
-            and exclusive cars that will surprise everyone around you.
+            <br></br>and exclusive cars that will surprise everyone around you.
           </p>
           <Buttons>
             <a href="tel:+380730000000">Rental car</a>

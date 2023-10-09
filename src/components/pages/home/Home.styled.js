@@ -39,4 +39,5 @@ export const Features = styled.div`
 export const Buttons = styled.div`
   display: flex;
   gap: 20px;
+  margin-top: 10px;
 `;
