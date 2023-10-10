@@ -29,6 +29,7 @@ export const CarsList = styled.ul`
   list-style: none;
   gap: 29px;
   padding-left: 0;
+  justify-content: center;
 `;
 export const Decoration = styled.div`
   display: flex;

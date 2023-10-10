@@ -13,6 +13,7 @@ export const Modal = styled.div`
   border-radius: 10px;
   padding: 40px;
   background-color: white;
+  max-height: 100vh;
 `;
 export const ModalBackdrop = styled.div`
   position: fixed;
@@ -103,6 +104,9 @@ export const RentalCarBtn = styled.a`
   margin-top: auto;
   text-align: center;
   cursor: pointer;
+  @media screen and (max-width: 600px) {
+    width: 100px;
+  }
 `;
 
 export const BlueColor = styled.span`
@@ -122,4 +126,12 @@ export const Condition = styled.li`
   background-color: #f9f9f9;
   border-radius: 20px;
   font-size: 13px;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`;
+export const Conditions = styled.p`
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;

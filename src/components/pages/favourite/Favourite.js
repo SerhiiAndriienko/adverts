@@ -12,7 +12,7 @@ export default function Favourite() {
   return (
     <Decoration>
       {favouriteList[0] ? (
-        <div style={{ maxWidth: '1184px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1184px', margin: '0 auto', padding: '20px' }}>
           <Title style={{ textAlign: 'center', margin: 0 }}>
             Your favourite`s cars list:
           </Title>

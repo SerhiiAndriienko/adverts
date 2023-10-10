@@ -20,7 +20,6 @@ export default function Cars() {
 
     async function fetchData() {
       setIsLoading(true);
-
       await axios
         .get(url.href)
         .then(response => {
@@ -31,7 +30,6 @@ export default function Cars() {
         })
 
         .catch(error => {
-          console.error(error);
           setIsLoading(false);
         });
     }
@@ -51,7 +49,7 @@ export default function Cars() {
   };
 
   return (
-    <div style={{ maxWidth: '1184px', margin: '0 auto' }}>
+    <div style={{ maxWidth: '1223px', margin: '0 auto' }}>
       <h2 style={{ textAlign: 'center' }}>Select your car:</h2>
       {isLoading ? <Loader /> : ''}
       <AllCarCards

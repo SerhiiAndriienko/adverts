@@ -21,8 +21,8 @@ export default function AllCarCard({
               <CardImg
                 src={car.img || auto}
                 onError={e => {
-                  e.target.src = auto;
                   e.preventDefault();
+                  e.target.src = auto;
                 }}
               ></CardImg>
               <Description
@@ -44,6 +44,7 @@ export default function AllCarCard({
         <ModalCard
           selectedCar={selectedCar}
           setIsModalOpen={setIsModalOpen}
+          isModalOpen={isModalOpen}
           onClose={() => {
             setSelectedCar(null);
           }}

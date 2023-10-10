@@ -39,7 +39,7 @@ export const CarsList = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   gap: 10px;
-  max-width: 500px;
+  max-width: 300px;
 `;
 
 export const Car = styled.p`
