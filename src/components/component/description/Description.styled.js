@@ -21,6 +21,8 @@ export const Descriptions = styled.div`
 `;
 export const Decoration = styled.div`
   display: flex;
+  cursor: pointer;
+
   align-items: center;
   justify-content: space-between;
   font-weight: 500;

@@ -37,6 +37,7 @@ export default function Cars() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const perPage = (pageNumber, carsList) => {
+    console.log(carsList);
     setCarsList(carsList.slice(0, pageNumber * 8));
   };
   const addFavouriteList = array => {

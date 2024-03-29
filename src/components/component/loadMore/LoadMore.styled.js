@@ -10,7 +10,7 @@ export const LoadMoreBtn = styled.button`
   border-radius: 10px;
   margin: 0 auto;
   border: 1px #3470ff solid;
-
+  cursor: pointer;
   :hover {
     background-color: #3470ff;
     color: white;

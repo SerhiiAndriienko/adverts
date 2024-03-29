@@ -20,7 +20,7 @@ export default function Description({
   return (
     <>
       <Descriptions>
-        <Decoration>
+        <Decoration onClick={openModal}>
           <p>
             {car.make} <CarModel>{car.model}</CarModel>, {car.year}
           </p>
